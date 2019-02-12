@@ -1,0 +1,52 @@
+.welcome-section {
+    background: #212531;
+}
+
+.login-section {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img%20(46).jpg")no-repeat center center;
+    background-size: cover;
+}
+.login-mask {
+    background: rgba(99,103,146,.4);
+}
+
+.welcome-container {
+    .welcome-text {
+        color: #FFFFFF;
+        background: #1E212C;
+        padding: 45px 45px 25px 50px;
+        width: 100%;
+        height: 245px;
+        max-width: 608px;
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .welcome-footer {
+        margin-bottom: 60px;
+    }
+}
+.form-signin {
+    width: 100%;
+    max-width: 608px;
+}
+.form-inputs {
+    background: #FFFFFF;
+    padding: 45px 45px 25px 50px;
+    height: 245px;
+}
+
+.login-label {
+    color: #FFFFFF;	
+    font-size: 32px;
+    padding-left: 50px;
+}
+
+.signup-text {
+    font-size: 80%;
+    color: #FFFFFF;	
+}
+
+.login-control {
+    padding: 0 50px;
+}

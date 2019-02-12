@@ -1,0 +1,26 @@
+.row
+    .col-lg-8
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a.nav-link(href='#')
+                    | Home 
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='#') Link
+            li.nav-item
+                a.nav-link.disabled(href='#') Disabled
+    .col-lg-4
+        ul.navbar-nav
+            li.nav-item.btn-group([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', dropdown)
+                a.nav-link.dropdown-toggle(dropdownToggle)
+                    i.fa.fa-user
+                .dropdown-menu.dropdown-primary.dropdown-menu-right(*dropdownMenu)
+                    a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/') Dashboard
+                    a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/profile') Profile
+                    a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/insights') Insights
+                    a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/history') History
+                    
+            li.nav-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}')
+                a.nav-link(routerLink="/login")
+                    i.fa.fa-sign-out
+                    |  Log out

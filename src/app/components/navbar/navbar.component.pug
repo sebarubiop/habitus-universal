@@ -1,0 +1,9 @@
+nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark(resizeObserver, (resize)="onResize($event)")
+  .container
+    a.navbar-brand(href="javascript:void(0)", routerLink="/") Expand at lg
+    button.navbar-toggler((click)="onNavMenu()")
+        span.navbar-toggler-icon
+    .collapse.navbar-collapse(*ngIf="sizeNav")
+        app-navbar-menu
+    .collapse.navbar-collapse.show(*ngIf="openNavMenu && !sizeNav", @heightExpand)
+        app-navbar-menu

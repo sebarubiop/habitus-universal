@@ -1,6 +1,10 @@
 {
   "compileOnSave": false,
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -14,6 +18,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noStrictGenericChecks": true,
+    "noImplicitAny": true
   }
 }

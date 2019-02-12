@@ -1,5 +1,6 @@
 export const ROUTES = [
   '/',
-  '/lazy',
-  '/lazy/nested'
+  '/login',
+  '/register',
+  '/profile'
 ];

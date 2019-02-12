@@ -5,7 +5,9 @@
   "projects": {
     "ng-universal-demo": {
       "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -28,7 +30,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -78,7 +80,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "assets": [
               {
