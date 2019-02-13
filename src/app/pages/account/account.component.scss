@@ -1,0 +1,19 @@
+.account-main {
+    margin-top: 100px;
+    padding: 1rem;
+    
+}
+
+.menu-side {
+    position: sticky;
+    top: 100px;
+    p, ul > li{
+        font-size: 85%;
+        margin-bottom: 10px;
+    }
+}
+
+.account-body {
+    position: sticky;
+    top: 100px;
+}

@@ -1,6 +1,15 @@
 app-navbar
-
-router-outlet
+.row.account-main
+  .col-md-3
+    .menu-side
+      p.text-muted: strong MENU
+      ul.pl-0(style="list-style-type:none;")
+        li Onboarding no boards
+        li Multiple Boards
+        li Rollover States
+        li New Databoard Modal
+  .col-md-9.account-body
+    router-outlet
 hr
 footer.container
   p © Company 2017-2018

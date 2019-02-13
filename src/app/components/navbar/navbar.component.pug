@@ -1,9 +1,14 @@
-nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark(resizeObserver, (resize)="onResize($event)")
-  .container
-    a.navbar-brand(href="javascript:void(0)", routerLink="/") Expand at lg
-    button.navbar-toggler((click)="onNavMenu()")
-        span.navbar-toggler-icon
-    .collapse.navbar-collapse(*ngIf="sizeNav")
-        app-navbar-menu
-    .collapse.navbar-collapse.show(*ngIf="openNavMenu && !sizeNav", @heightExpand)
-        app-navbar-menu
+nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.d-flex.justify-content-between(resizeObserver, (resize)="onResize($event)")
+    .d-flex.nav-brand(routerLink="/")
+        i.material-icons home
+        .brand-name.ml-5 Habitus.Network
+    .d-flex.nav-user
+        .logout.px-3(routerLink="/login") Logout
+        .username.px-3.dropdown-toggle Huw Jones
+        span.dot
+    //- button.navbar-toggler((click)="onNavMenu()")
+    //-     span.navbar-toggler-icon
+    //- .collapse.navbar-collapse(*ngIf="sizeNav")
+    //-     app-navbar-menu
+    //- .collapse.navbar-collapse.show(*ngIf="openNavMenu && !sizeNav", @heightExpand)
+    //-     app-navbar-menu

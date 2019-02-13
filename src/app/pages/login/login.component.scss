@@ -33,14 +33,17 @@
     background: rgba(99,103,146,.4);
 }
 
-.form-signin {
-    width: 100%;
-    max-width: 608px;
-}
 .form-inputs {
     background: #FFFFFF;
     padding: 45px 45px 25px 50px;
     height: 245px;
+    .forgot-password {
+        a {
+            font-size: 80%;
+            color: #A4AFBE;
+        }
+        
+    }
 }
 
 .login-label {
@@ -50,7 +53,7 @@
 }
 
 .signup-text {
-    font-size: 80%;
+    font-size: 85%;
     color: #FFFFFF;	
 }
 

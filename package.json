@@ -49,6 +49,7 @@
     "core-js": "^2.4.1",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
+    "material-icons": "^0.3.0",
     "ng-cli-pug-loader": "^0.1.7",
     "ngx-bootstrap": "^3.2.0",
     "reflect-metadata": "^0.1.10",
