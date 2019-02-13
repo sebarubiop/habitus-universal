@@ -1,14 +1,17 @@
 .row.vh-100.view
-  .col-md-6.px-0.welcome-section.d-flex.align-items-center.justify-content-end
-    .d-flex.flex-column.welcome-container
-      .welcome-text
-        h1 Welcome to Habitus.Network
-        p Data visualisation
-      .welcome-footer
+  .col-md-6.px-0.welcome-section
+    .d-flex.align-items-center.justify-content-end.h-100
+      .d-flex.flex-column.welcome-container
+        .welcome-text
+          h1 Welcome to Habitus.Network
+          p Data visualisation
+        .welcome-bottom
+    .d-flex.welcome-footer.mb-4
+      app-footer
   .col-md-6.px-0.login-section
     .vh-100.d-flex.align-items-center.login-mask
       .d-flex.flex-column.flex-grow-1
-        .login-label Login to your account
+        .login-label.mb-3 Login to your account
         form.form-signin([formGroup]="form", (submit)="onLoginSubmit()")
           .form-inputs
             .form-label-group
