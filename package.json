@@ -6,19 +6,10 @@
     "type": "git",
     "url": "https://github.com/angular/universal-starter.git"
   },
-  "contributors": [
-    "AngularClass <hello@angularclass.com>",
-    "PatrickJS <patrick@angularclass.com>",
-    "Jeff Whelpley <jeff@gethuman.com>",
-    "Jeff Cross <crossj@google.com>",
-    "Mark Pieszak <mpieszak84@gmail.com>",
-    "Jason Jean <jasonjean1993@gmail.com>",
-    "Fabian Wiles <fabian.wiles@gmail.com>"
-  ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm run serve:ssr",
+    "build": "ng build --prod",
     "lint": "ng lint ng-universal-demo",
     "build:client-and-server-bundles": "ng build --prod && ng run ng-universal-demo:server:production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run generate:prerender",
@@ -27,7 +18,7 @@
     "generate:prerender": "cd dist && node prerender",
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
-    "postinstall": "node ./ng-add-pug-loader.js"
+    "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr"
   },
   "pre-commit": [],
   "private": true,
@@ -72,5 +63,9 @@
     "ts-loader": "^4.2.0",
     "tslint": "^5.7.0",
     "typescript": "3.1.6"
+  },
+  "engines": {
+    "node": "8.11.2",
+    "npm": "6.5.0"
   }
 }
