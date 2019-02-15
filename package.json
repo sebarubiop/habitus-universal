@@ -20,7 +20,6 @@
     "serve:ssr": "node dist/server",
     "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr"
   },
-  "pre-commit": [],
   "private": true,
   "dependencies": {
     "@angular/animations": "7.1.4",
