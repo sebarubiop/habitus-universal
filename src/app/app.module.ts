@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import { appRoutes, routedComponents } from './app-routing.module'
@@ -21,11 +22,13 @@ const components = [
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
     TransferHttpCacheModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

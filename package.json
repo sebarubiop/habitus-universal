@@ -18,7 +18,8 @@
     "generate:prerender": "cd dist && node prerender",
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
-    "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr"
+    "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr",
+    "start:ssr":"npm run build:ssr && npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
