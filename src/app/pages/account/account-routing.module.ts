@@ -6,11 +6,12 @@ import { DashboardComponent } from '@app/pages/account/dashboard/dashboard.compo
 import { ProfileComponent } from '@app/pages/account/profile/profile.component'
 
 const routes: Routes = [
+  { path: '', redirectTo: '/app/dashboard', pathMatch: 'full' },
   {
     path: '',
     component: AccountComponent,
     children: [
-        { path: '', component: DashboardComponent },
+        { path: 'dashboard', component: DashboardComponent },
         { path: 'profile', component: ProfileComponent },
     ],
   }

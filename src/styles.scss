@@ -6,8 +6,10 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
 $material-icons-font-path: '../node_modules/material-icons/iconfont/';
 @import '../node_modules/material-icons/iconfont/material-icons.scss';
 
+$white: #eef3f6;
+
 body {
-    background-color: #eef3f6;
+    background-color: $white;
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
     overflow-x: hidden;

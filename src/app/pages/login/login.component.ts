@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginSubmit() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/app'])
   }
 
 }
