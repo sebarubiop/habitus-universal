@@ -1,12 +1,38 @@
 main(role='main')
   // Main jumbotron for a primary marketing message or call to action
-  .jumbotron
+  .jumbotron.main-header
     .container
-      h1.display-3 Dashboard
-      p
-        | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-      p
-        a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
+      .row
+        .col-sm-3
+          .card
+            img.card-img-top(src='/assets/images/health.jpg', alt='Card image cap')
+            .card-body
+              h5.card-title Health & Fitness
+              p.card-text With supporting text below as a natural lead-in to additional content.
+              
+        .col-sm-3
+          .card
+            img.card-img-top(src='/assets/images/health.jpg', alt='Card image cap')
+            .card-body
+              h5.card-title Health & Fitness
+              p.card-text My Personal Health & Medical Record
+              
+        .col-sm-3
+          .card
+            img.card-img-top(src='/assets/images/health.jpg', alt='Card image cap')
+            .card-body
+              h5.card-title Home & Security
+              p.card-text Energy Usage, Security & Connected Home
+              
+        .col-sm-3
+          .card
+            img.card-img-top(src='/assets/images/health.jpg', alt='Card image cap')
+            .card-body
+              h5.card-title My Community
+              p.card-text What is going on in my Neighbourhood
+              
+      
+    
   .container
     // Example row of columns
     .row
