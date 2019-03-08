@@ -15,6 +15,15 @@ p.card-text {
     font-size: 14px;
     font-weight: 500;
     color: #5b6574;
+
+}
+
+h5.rollover {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 1;
 }
 
 .main-header {
@@ -27,22 +36,18 @@ p.card-text {
 }
 .card {
     position: relative;
-    &:hover{
-        box-shadow: 0 3px 3px 0 rgba(70, 70, 70, 0.096), 0 3px 10px 0 rgba(223, 223, 223, 0.021);
     }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+/* Overlay */
+.ovl {
     opacity: 0;
-    transition: .5s ease;
-    background-color: rgb(29, 33, 34);
-  }
+    height: 52%;
+}
+
+.ovl:hover {
+    opacity: 1;
+    background: #3540524d;
+    height: 52%;
 }
 
 .material-icons.large {

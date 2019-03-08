@@ -5,12 +5,13 @@ main(role='main')
       .row
         .col-sm-3
           .card.add
-            .card-body
+            .d-flex.justify-content-sm-center.card-body
               i.material-icons.large add_circle_outline
         .col-sm-3
           .card
             img.card-img-top(src='/assets/images/health.jpg', alt='My Health & Fitness')
-            .overlay
+            .card-img-overlay.ovl
+              h5.rollover view now
             .card-body
               h5.card-title My Health & Fitness
               p.card-text My personal health and medical record
@@ -19,6 +20,8 @@ main(role='main')
         .col-sm-3
           .card
             img.card-img-top(src='/assets/images/home.jpg', alt='My Home')
+            .card-img-overlay.ovl
+              h5.rollover view now
             .card-body
               h5.card-title My Home
               p.card-text Energy usage, security and the connected home
@@ -26,6 +29,8 @@ main(role='main')
         .col-sm-3
           .card
             img.card-img-top(src='/assets/images/community.jpg', alt='My Community')
+            .card-img-overlay.ovl
+              h5.rollover view now
             .card-body
               h5.card-title My Community
               p.card-text What is going on in my neighbourhood
