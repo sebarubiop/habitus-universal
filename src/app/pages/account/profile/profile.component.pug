@@ -1,30 +1,55 @@
 main(role='main')
   // Main jumbotron for a primary marketing message or call to action
-  .jumbotron
+  .jumbotron.main-header
     .container
-      h1.display-3 Profile
-      p
-        | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-      p
-        a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
-  .container
-    // Example row of columns
-    .row
-      .col-md-4
-        h2 Heading
-        p
-          | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        p
-          a.btn.btn-secondary(href='#', role='button') View details »
-      .col-md-4
-        h2 Heading
-        p
-          | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        p
-          a.btn.btn-secondary(href='#', role='button') View details »
-      .col-md-4
-        h2 Heading
-        p
-          | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        p
-          a.btn.btn-secondary(href='#', role='button') View details »
+        .row
+          .col-sm-2
+            .card
+              img.card-img-top(src='/assets/images/profile.jpg', alt='profile picture')
+
+                
+                
+          .col-sm-10
+            .card.add
+              .card-body
+                h5.card-title Account Settings
+                p.card-text General Information 
+                form
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='inputEmail3') Email
+                    .col-sm-10
+                      input#inputEmail3.form-control(type='email' placeholder='Email')
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='inputPassword3') Password
+                    .col-sm-10
+                      input#inputPassword3.form-control(type='password' placeholder='Password')
+                  fieldset.form-group
+                    .row
+                      legend.col-form-label.col-sm-2.pt-0 Radios
+                      .col-sm-10
+                        .form-check
+                          input#gridRadios1.form-check-input(type='radio' name='gridRadios' value='option1' checked='')
+                          label.form-check-label(for='gridRadios1')
+                            | First radio
+                        .form-check
+                          input#gridRadios2.form-check-input(type='radio' name='gridRadios' value='option2')
+                          label.form-check-label(for='gridRadios2')
+                            | Second radio
+                        .form-check.disabled
+                          input#gridRadios3.form-check-input(type='radio' name='gridRadios' value='option3' disabled='')
+                          label.form-check-label(for='gridRadios3')
+                            | Third disabled radio
+                  .form-group.row
+                    .col-sm-2 Checkbox
+                    .col-sm-10
+                      .form-check
+                        input#gridCheck1.form-check-input(type='checkbox')
+                        label.form-check-label(for='gridCheck1')
+                          | Example checkbox
+                  .form-group.row
+                    .col-sm-10
+                      button.btn.btn-primary(type='submit') Sign in
+
+        
+      
+        
