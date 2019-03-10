@@ -38,18 +38,21 @@ p.card-text {
         box-shadow: 0 3px 3px 0 rgba(70, 70, 70, 0.096), 0 3px 10px 0 rgba(223, 223, 223, 0.021);
     }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgb(29, 33, 34);
-  }
+
+}
+button.btn.btn-primary.btn-sm.submit {
+    background-color: #192d4d;
+    text-decoration-line: none;
+    border: none;
+}
+
+button.btn.btn-primary.btn-sm.submit:hover {
+    background-color: #3e4c644d;
+}
+
+img.card-img-top.profile:hover {
+    background-color: #3e4c644d;
+    opacity: 0.2;
 }
 
 .material-icons.large {
