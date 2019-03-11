@@ -4,34 +4,30 @@ main(role='main')
     .container
       .row
         .col-sm-3
-          .card.add
+          a.card.add(href='#')
             .d-flex.justify-content-sm-center.card-body
               i.material-icons.large add_circle_outline
+              
         .col-sm-3
-          .card
-            img.card-img-top(src='/assets/images/health.jpg', alt='My Health & Fitness')
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/health.jpg', alt='My Health & Fitness')
             .card-body
               h5.card-title My Health & Fitness
               p.card-text My personal health and medical record
-            
-
-              
               
         .col-sm-3
-          .card
-            img.card-img-top(src='/assets/images/home.jpg', alt='My Home')
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/home.jpg', alt='My Home')
             .card-body
               h5.card-title My Home
               p.card-text Energy usage, security and the connected home
-              a.btn-primary.btn-sm.btn-block(href='#') View Dashboard
-              
+                      
         .col-sm-3
-          .card
-            img.card-img-top(src='/assets/images/community.jpg', alt='My Community')
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/community.jpg', alt='My Community')
             .card-body
               h5.card-title My Community
               p.card-text What is going on in my neighbourhood
-              a.btn-primary.btn-sm.btn-block(href='#') View Dashboard
-          
-    
-      

@@ -31,15 +31,43 @@ h5.rollover {
 }
 
 .card.add {
-    height: 100%;
+    height: 228px;
     border-style: dashed;
+    margin: 10px;
 }
 .card {
     position: relative;
+    margin: 10px;
     }
 
 .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    text-decoration-line: none;
+    }
+
+/* Card Image Change on Hover */
+
+.card-img-wrap {
+    overflow: hidden;
+    position: relative;
+    }
+.card-img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.26);
+    opacity: 0;
+    transition: opacity .25s;
+    }
+.card-img-wrap img {
+    transition: transform .35s;
+    width: 100%;
+    }
+.card-img-wrap:hover img {
+    transform: scale(1.02);
+    }
+.card-img-wrap:hover:after {
+    opacity: 1;
     }
 
 /* Overlay */
@@ -84,6 +112,6 @@ a.btn-primary.btn-sm.btn-block {
   }
 
   .card.add:hover {
-    background-color: #192d4d;
+    background-color: #304666b6;
   }
  
