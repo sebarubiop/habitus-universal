@@ -9,7 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run serve:ssr",
-    "build": "ng build --prod",
+    "build": "npm run build:ssr",
     "lint": "ng lint ng-universal-demo",
     "build:client-and-server-bundles": "ng build --prod && ng run ng-universal-demo:server:production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run generate:prerender",
@@ -18,7 +18,7 @@
     "generate:prerender": "cd dist && node prerender",
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
-    "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr",
+    "postinstall": "node ./ng-add-pug-loader.js",
     "start:ssr": "npm run build:ssr && npm run serve:ssr"
   },
   "private": true,
