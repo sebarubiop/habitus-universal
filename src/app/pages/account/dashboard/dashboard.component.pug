@@ -1,17 +1,33 @@
 main(role='main')
   // Main jumbotron for a primary marketing message or call to action
-  .jumbotron
+  .jumbotron.main-header
     .container
-      h1.display-3 Dashboard
-      p
-        | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-      p
-        a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
-  .container
-    // Example row of columns
-    .row
-      .col
-        ul(*ngIf="regionesComunas")
-          li(*ngFor="let reg of regionesComunas.data")
-            h4 {{reg.first_name}}
-      
+      .row
+        .col-sm-3
+          a.card.add(href='#')
+            .d-flex.justify-content-sm-center.card-body
+              i.material-icons.large add_circle_outline
+              
+        .col-sm-3
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/health.jpg', alt='My Health & Fitness')
+            .card-body
+              h5.card-title My Health & Fitness
+              p.card-text My personal health and medical record
+              
+        .col-sm-3
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/home.jpg', alt='My Home')
+            .card-body
+              h5.card-title My Home
+              p.card-text Energy usage, security and the connected home
+                      
+        .col-sm-3
+          a.card(href='#')
+            .card-img-wrap
+              img.card-img-top(src='/assets/images/community.jpg', alt='My Community')
+            .card-body
+              h5.card-title My Community
+              p.card-text What is going on in my neighbourhood

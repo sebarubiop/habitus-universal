@@ -2,6 +2,7 @@
 $fa-font-path: "~font-awesome/fonts";
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/scss/font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Lato');
 
 $material-icons-font-path: '~material-icons/iconfont/';
 @import '~material-icons/iconfont/material-icons';
@@ -13,6 +14,7 @@ body {
     --input-padding-x: .75rem;
     --input-padding-y: .75rem;
     overflow-x: hidden;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .form-control {
