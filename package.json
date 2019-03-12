@@ -19,7 +19,7 @@
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
     "postinstall": "node ./ng-add-pug-loader.js && npm run build:ssr",
-    "start:ssr":"npm run build:ssr && npm run serve:ssr"
+    "start:ssr": "npm run build:ssr && npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
@@ -33,14 +33,19 @@
     "@angular/platform-browser-dynamic": "7.1.4",
     "@angular/platform-server": "7.1.4",
     "@angular/router": "7.1.4",
+    "@ng-toolkit/universal": "^1.1.51",
     "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
+    "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^4.2.1",
     "core-js": "^2.4.1",
+    "dotenv": "^6.2.0",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^8.5.0",
     "material-icons": "^0.3.0",
+    "mongoose": "^5.4.19",
     "ng-cli-pug-loader": "^0.1.7",
     "ngx-bootstrap": "^3.2.0",
     "reflect-metadata": "^0.1.10",

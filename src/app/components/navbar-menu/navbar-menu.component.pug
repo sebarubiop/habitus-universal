@@ -21,6 +21,6 @@
                     a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/history') History
                     
             li.nav-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}')
-                a.nav-link(routerLink="/login")
+                a.nav-link((click)='authService.logoutUser()')
                     i.fa.fa-sign-out
                     |  Log out
