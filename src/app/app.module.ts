@@ -4,11 +4,13 @@ import {RouterModule} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import {TransferHttpCacheModule} from '@nguniversal/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgtUniversalModule } from '@ng-toolkit/universal'
 
 import {AppComponent} from './app.component';
 import { appRoutes, routedComponents } from './app-routing.module'
 import { FooterComponent } from '@app/components/footer/footer.component'
+import { InterceptorService } from '@app/services/interceptor.service'
 
 const components = [
   FooterComponent,
@@ -22,15 +24,21 @@ const components = [
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     TransferHttpCacheModule,
     HttpClientModule,
-    
+    NgtUniversalModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

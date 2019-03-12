@@ -1,11 +1,11 @@
 nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.d-flex.justify-content-between(resizeObserver, (resize)="onResize($event)")
-    .d-flex.nav-brand(routerLink="/")
+    .d-flex.nav-brand(routerLink="/app")
         i.material-icons menu
         .brand-name.ml-5 Databoards
     .d-flex.nav-user
-        .logout.px-3(routerLink="/login") 
+        .logout.px-3((click)='authService.logoutUser()') Logout
         .user.px-3(dropdown) 
-            .username.dropdown-toggle(dropdownToggle) Huw Jones
+            .username.dropdown-toggle(dropdownToggle) {{authService.user.name}}
             .dropdown-menu.dropdown-primary.dropdown-menu-right(*dropdownMenu,style="transform: translateY(-19px);")
                 a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/app/dashboard') Dashboard
                 a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/app//profile') Profile

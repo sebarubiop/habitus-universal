@@ -24,19 +24,26 @@
             input#inputName.form-control(placeholder="Name", required="", formControlName="nameCtrl")
             label(for="inputName") Name
           .form-label-group
-            input#inputEmail.form-control(type="email", placeholder="Email address", required="", formControlName="emailCtrl")
+            input#inputEmail.form-control(type="email", placeholder="Email address", required="", formControlName="emailCtrl", (blur)="checkEmail()")
             label(for="inputEmail") Email address
+            .mat-error(role="alert", *ngIf="!emailValid") {{emailMessage}}
           .form-label-group
             input#inputPassword.form-control(type="password", placeholder="Password", required="", formControlName="passwordCtrl")
             label(for="inputPassword") Password
           .form-label-group
             input#inputConfirmPass.form-control(type="password", placeholder="Confirm Password", required="", formControlName="confirmPassCtrl")
             label(for="inputConfirmPass") Confirm Password
-        
+
+          .message-text(*ngIf="message || isError", [ngClass]="messageClass")
+            | {{message}}
           .mt-5.mb-3.text-muted.d-flex.justify-content-between.align-items-center.register-control
             small Agree to 
               a(routerLink="/"): u Terms & Conditions
-            button.btn.btn-danger(type="submit") Register
+            button.btn.btn-danger(type="submit", [disabled]="!form.valid || processing || !emailValid ") Register
+          //- pre Name: {{form.controls.nameCtrl.errors | json}}
+          //- pre email: {{form.controls.emailCtrl.errors | json}}
+          //- pre password: {{form.controls.passwordCtrl.errors | json}}
+          //- pre confirmPass: {{form.controls.confirmPassCtrl.errors | json}}
     .d-flex.register-footer.mb-4.ml-4
       .terms-text Already have an account? 
         a(routerLink="/login"): u Login

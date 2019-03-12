@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 
 import { animation } from '@app/animation/animation-custom'
+import { AuthenticationService } from '@app/services/authentication.service'
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,7 @@ export class NavbarComponent implements OnInit {
   sizeNav: boolean
 
   constructor(
+    public authService: AuthenticationService,
   ) { }
 
   ngOnInit() {
