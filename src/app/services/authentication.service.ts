@@ -58,7 +58,7 @@ export class AuthenticationService {
     return this.localStorage.getItem('token')
   }
 
-  getUserFromStorage(): { email: string, _id: string, image?: string } {
+  getUserFromStorage(){
     return this.localStorage.getItem('user') ? JSON.parse(this.localStorage.getItem('user')) : null
   }
 

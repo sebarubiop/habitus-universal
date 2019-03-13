@@ -5,7 +5,7 @@ nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.d-flex.justify-content-between
     .d-flex.nav-user
         .logout.px-3((click)='authService.logoutUser()') Logout
         .user.px-3(dropdown) 
-            .username.dropdown-toggle(dropdownToggle) {{authService.user.name}}
+            .username.dropdown-toggle(dropdownToggle) {{user.name}}
             .dropdown-menu.dropdown-primary.dropdown-menu-right(*dropdownMenu,style="transform: translateY(-19px);")
                 a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/app/dashboard') Dashboard
                 a.dropdown-item([routerLinkActive]="['active']", [routerLinkActiveOptions]='{exact:true}', routerLink='/app//profile') Profile

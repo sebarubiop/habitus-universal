@@ -13,7 +13,7 @@ exports.allUsers = function (req, res) {
     } else {
       // Check if users were found in database
       if (!users) {
-        res.json({ success: false, message: 'NO se encuentran users.' }); // Return error of no users found
+        res.json({ success: false, message: 'NO users are found.' }); // Return error of no users found
       } else {
         res.json({ success: true, value: users }); // Return success and users array
       }
@@ -25,15 +25,15 @@ exports.allUsers = function (req, res) {
 exports.register = function (req, res) {
   // Check if email was provided
   if (!req.body.email) {
-    res.json({ success: false, message: 'Debe proporcionar un e-mail' }); // Return error
+    res.json({ success: false, message: 'You must provide an e-mail' }); // Return error
   } else {
     // Check if username was provided
     if (!req.body.name) {
-      res.json({ success: false, message: 'Debe proporcionar un nombre' }); // Return error
+      res.json({ success: false, message: 'You must provide a name' }); // Return error
     } else {
       // Check if password was provided
       if (!req.body.password) {
-        res.json({ success: false, message: 'Debe proporcionar una contraseña' }); // Return error
+        res.json({ success: false, message: 'You must provide a password' }); // Return error
       } else {
         let user
         if (!req.body.provider) {
@@ -59,7 +59,7 @@ exports.register = function (req, res) {
           if (err) {
             // Check if error is an error indicating duplicate account
             if (err.code === 11000) {
-              res.json({ success: false, message: 'Usuario ya existe' }); // Return error
+              res.json({ success: false, message: 'User already exists' }); // Return error
             } else {
               // Check if error is a validation rror
               if (err.errors) {
@@ -80,11 +80,11 @@ exports.register = function (req, res) {
                   }
                 }
               } else {
-                res.json({ success: false, message: 'No se pudo guardar el usuario. Error: ' + err }); // Return error if not related to validation
+                res.json({ success: false, message: 'The user could not be saved. Error: ' + err }); // Return error if not related to validation
               }
             }
           } else {
-            res.json({ success: true, message: 'Cuenta creada!' }); // Return success
+            res.json({ success: true, message: 'Account Created!' }); // Return success
           }
         });
       }
@@ -108,9 +108,9 @@ exports.checkEmail = function (req, res) {
       } else {
         // Check if user's e-mail is taken
         if (user) {
-          res.json({ success: false, message: 'E-mail NO disponible' }); // Return as taken e-mail
+          res.json({ success: false, message: 'E-mail not available' }); // Return as taken e-mail
         } else {
-          res.json({ success: true, message: 'E-mail disponible' }); // Return as available e-mail
+          res.json({ success: true, message: 'E-mail available' }); // Return as available e-mail
         }
       }
     });
@@ -121,11 +121,11 @@ exports.login = function (req, res) {
 
   // Check if email was provided
   if (!req.body.email) {
-    res.json({ success: false, message: 'Debe proporcionar un e-mail' }); // Return error
+    res.json({ success: false, message: 'You must provide an e-mail' }); // Return error
   } else {
     // Check if password was provided
     if (!req.body.password) {
-      res.json({ success: false, message: 'Debe proporcionar una contraseña' }); // Return error
+      res.json({ success: false, message: 'You must provide a password' }); // Return error
     } else {
       // Check if username exists in database
       User.findOne({ email: req.body.email }, (err, user) => {
@@ -135,18 +135,18 @@ exports.login = function (req, res) {
         } else {
           // Check if username was found
           if (!user) {
-            res.json({ success: false, message: 'No se encuentra el usuario' }); // Return error
+            res.json({ success: false, message: 'The user is not found' }); // Return error
           } else {
             const validPassword = user.comparePassword(req.body.password); // Compare password provided to password in database
             // Check if password is a match
             if (!validPassword) {
-              res.json({ success: false, message: 'Contraseña inválida' }); // Return error
+              res.json({ success: false, message: 'Invalid Password' }); // Return error
             } else {
               const token = jwt.sign({ userId: user._id }, config.secret, { expiresIn: '24h' }); // Create a token for client
 
               res.json({
                 success: true,
-                message: 'Bienvenido a Hazlo por mi!',
+                message: 'Welcome to Habitus.Network',
                 token: token,
                 value: { _id: user._id, email: user.email, image: user.image, name: user.name }
               }); // Return success and token to frontend
@@ -204,7 +204,7 @@ exports.me2 = function (req, res) {
 exports.updateUser = function (req, res) {
   // Check if id is present in parameters
   if (!req.params.id) {
-    res.json({ success: false, message: 'ID no fue provisto.' }); // Return error message
+    res.json({ success: false, message: 'ID not provided' }); // Return error message
   } else {
     User.updateOne({ _id: req.params.id }, req.body, (err, raw) => {
       if (err) {
@@ -219,7 +219,7 @@ exports.updateUser = function (req, res) {
 exports.singleUser = function (req, res) {
   // Check if id is present in parameters
   if (!req.params.id) {
-    res.json({ success: false, message: 'ID no fue provisto.' }); // Return error message
+    res.json({ success: false, message: 'ID not provided' }); // Return error message
   } else {
     // Check if the user id is found in database
     User.findOne({ _id: req.params.id }, (err, user) => {
@@ -229,7 +229,7 @@ exports.singleUser = function (req, res) {
       } else {
         // Check if user was found by id
         if (!user) {
-          res.json({ success: false, message: 'No se ha encontrado user' }); // Return error message
+          res.json({ success: false, message: 'No user found' }); // Return error message
         } else {
           res.json({ success: true, value: user }); // Return success
         }
