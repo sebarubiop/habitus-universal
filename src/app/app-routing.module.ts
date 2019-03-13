@@ -4,7 +4,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { LoginComponent } from './pages/login/login.component'
 import { RegisterComponent } from './pages/register/register.component'
 import { HomeComponent } from './pages/home/home.component'
-import { NotAuthGuard } from '@app/services/guards/notAuth.guard'
+// import { NotAuthGuard } from '@app/services/guards/notAuth.guard'
 
 export const appRoutes: Routes = [
     {
@@ -18,12 +18,12 @@ export const appRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
-        canActivate: [NotAuthGuard]
+        // canActivate: [NotAuthGuard]
     },
     {
         path: 'register',
         component: RegisterComponent,
-        canActivate: [NotAuthGuard]
+        // canActivate: [NotAuthGuard]
     },
     { path: '**', component: PageNotFoundComponent } // "Catch-All" Route
 ];
